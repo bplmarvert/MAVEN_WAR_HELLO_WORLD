@@ -1,4 +1,4 @@
-spipeline{
+pipeline{
     agent any
     tools {
       maven 'maven'
@@ -11,10 +11,10 @@ spipeline{
             }
         }        
             
-        /*stage('Docker Build'){
+        stage('Docker Build'){
             steps{
                 sh "docker build . -t bmourrieras/MAVEN_WAR_HELLO_WORLD:0.1"
             }
-        } */    
+        }  
     }
 }
