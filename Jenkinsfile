@@ -1,4 +1,4 @@
-pipeline{
+spipeline{
     agent any
     tools {
       maven 'maven'
@@ -13,7 +13,7 @@ pipeline{
             
         stage('Docker Build'){
             steps{
-                sh "docker build . -t bruno/prjDevOps:${DOCKER_TAG} "
+                sh "docker build . -t bmourrieras/prjDevOps:${DOCKER_TAG} "
             }
         }     
     }
