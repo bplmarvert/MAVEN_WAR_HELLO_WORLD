@@ -3,9 +3,9 @@ spipeline{
     tools {
       maven 'maven'
     }
-    environment {
+    /*environment {
         DOCKER_TAG = getVersion()
-    }
+    }*/
     stages{
         
         stage('Maven Build'){
@@ -16,7 +16,7 @@ spipeline{
             
         stage('Docker Build'){
             steps{
-                sh "docker build . -t bmourrieras/MAVEN_WAR_HELLO_WORLD:${DOCKER_TAG} "
+                sh "docker build . -t bmourrieras/MAVEN_WAR_HELLO_WORLD:0.1"
             }
         }     
     }
