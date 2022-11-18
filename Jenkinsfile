@@ -20,9 +20,7 @@ pipeline{
         stage('DockerHub Push'){
             steps{
                     sh "docker login -u ${username} -p ${password}"
-                }
-                
-                sh "docker push bmourrieras/prjdevops:0.1 "
+                 sh "docker push bmourrieras/prjdevops:0.1 "
             }
         }
     }
