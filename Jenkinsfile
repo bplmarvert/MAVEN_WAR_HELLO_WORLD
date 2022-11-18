@@ -3,9 +3,6 @@ spipeline{
     tools {
       maven 'maven'
     }
-    /*environment {
-        DOCKER_TAG = getVersion()
-    }*/
     stages{
         
         stage('Maven Build'){
