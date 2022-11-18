@@ -10,5 +10,11 @@ pipeline{
                 sh "mvn clean package"
             }
         }        
+            
+        stage('Docker Build'){
+            steps{
+                sh "docker build . -t kammana/hariapp:${DOCKER_TAG} "
+            }
+        }     
     }
 }
