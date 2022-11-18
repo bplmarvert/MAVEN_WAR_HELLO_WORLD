@@ -22,7 +22,7 @@ pipeline{
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
                     sh "docker login -u ${username} -p ${dockerHubPwd}"
                 }
-                 sh "docker push bmourrieras/prjdevops:0.1 "
+                 sh "docker push bmourrieras/prjdevobs:0.1 "
             }
         }
     }
