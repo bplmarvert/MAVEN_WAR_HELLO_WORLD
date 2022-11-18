@@ -23,7 +23,7 @@ pipeline{
                     sh "docker login -u bmourrieras -p ${dockerHubPwd}"
                 }
                 
-                sh "docker push bmourrieras/prjdevobs:0.1 "
+                sh "docker push bmourrieras/prjdevobs:0.1"
             }
         }
     }
