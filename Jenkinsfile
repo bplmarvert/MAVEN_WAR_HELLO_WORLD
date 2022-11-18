@@ -17,7 +17,7 @@ pipeline{
             
         stage('Docker Build'){
             steps{
-                sh "docker build . -t bmourrieras/prjdevobs:${DOCKER_TAG}"
+                sh "docker build . -t bmourrieras/prjdevobs:0.1"
             }
         }  
     }
