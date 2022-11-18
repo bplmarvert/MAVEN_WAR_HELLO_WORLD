@@ -16,6 +16,15 @@ pipeline{
             steps{
                 sh "docker build . -t bmourrieras/prjdevobs:0.1"
             }
-        }  
+        } 
+        stage('DockerHub Push'){
+            steps{
+                withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
+                    sh "docker login -u bmourrieras -p ${dockerHubPwd}"
+                }
+                
+                sh "docker push bmourrieras/prjdevops:${DOCKER_TAG} "
+            }
+        }
     }
 }
