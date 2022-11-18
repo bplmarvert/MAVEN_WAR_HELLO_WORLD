@@ -20,7 +20,7 @@ pipeline{
         stage('DockerHub Push'){
             steps{
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPwd')]) {
-                    sh "docker login -u bmourrieras -p ${dockerHubPwd}"
+                    sh "docker login -u bmourrieras -p Quercinus"
                 }
                 
                 sh "docker push bmourrieras/prjdevobst0.1"
