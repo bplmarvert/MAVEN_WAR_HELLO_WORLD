@@ -6,6 +6,7 @@ pipeline{
     environment {
         DOCKER_TAG = getVersion()
     }
+    
     stages{
         
         stage('Maven Build'){
@@ -16,7 +17,7 @@ pipeline{
             
         stage('Docker Build'){
             steps{
-                sh "docker build . -t bmourrieras/MAVEN_WAR_HELLO_WORLD:{DOCKER_TAG}"
+                sh "docker build . -t bmourrieras/MAVEN_WAR_HELLO_WORLD:${DOCKER_TAG}"
             }
         }  
     }
