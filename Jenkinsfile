@@ -14,7 +14,7 @@ pipeline{
             
         stage('Docker Build'){
             steps{
-                sh "docker build . -t bmourrieras/prjdevobs:0.1"
+                sh "docker build . -t bmourrieras/prjdevobst0.1"
             }
         } 
         stage('DockerHub Push'){
@@ -23,7 +23,7 @@ pipeline{
                     sh "docker login -u bmourrieras -p ${dockerHubPwd}"
                 }
                 
-                sh "docker push bmourrieras/prjdevobs:0.1"
+                sh "docker push bmourrieras/prjdevobst0.1"
             }
         }
     }
